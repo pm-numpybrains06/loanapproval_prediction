@@ -11,6 +11,13 @@ import numpy as np
 import json
 from streamlit_lottie import st_lottie
 
+def load_lottie():
+    with open("header_animation.json", "r") as f:
+        return json.load(f)
+
+st_lottie(load_lottie(), height=250)
+
+
 # Load the trained model
 model = pickle.load(open('loan_model.pkl', 'rb'))
 
@@ -46,7 +53,7 @@ def load_lottiefile(filepath: str):
 
 success_anim = load_lottiefile("success_animation.json")
 fail_anim = load_lottiefile("failure_animation.json")
-header_anim = load_lottiefile("header_animation.json")
+
 
 with st.sidebar:
     st.title("📊 About This App")
