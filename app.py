@@ -81,7 +81,7 @@ def encode_inputs():
         features = encode_inputs()
         prediction = model.predict(features)[0]
 
-     if prediction == 1:
+    if prediction == 1:
         st.success("✅ Loan Approved!")
         st_lottie(success_anim, speed=1, height=300)
     else:
