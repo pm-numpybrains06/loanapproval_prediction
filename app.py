@@ -32,13 +32,17 @@ with st.sidebar:
     This app predicts whether a loan will be **approved** or **rejected** based on applicant data.
 
     **Built with**:
+    - Python
+    - Numpy
+    - Pandas
     - Streamlit
     - Scikit-learn
     - Lottie Animations
 
     Upload your model: `loan_model.pkl`  
     Add animations: `success.json`, `fail.json`, `header.json`
-    """)
+    """
+               Developed by :- Prajukta Mandal)
 
 # Input form
 gender = st.selectbox("Gender", ["Male", "Female"])
