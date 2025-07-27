@@ -15,6 +15,26 @@ from streamlit_lottie import st_lottie
 model = pickle.load(open('loan_model.pkl', 'rb'))
 
 st.set_page_config(page_title="Loan Approval Predictor", layout="centered")
+st.markdown("""
+    <style>
+    .stButton > button {
+        background-color: #007BFF; /* Blue */
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 12px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .stButton > button:hover {
+        background-color: #0056b3; /* Darker blue */
+        transform: scale(1.05);
+    }
+    </style>
+""", unsafe_allow_html=True)
 st.title("🏦 Loan Approval Prediction App")
 st.markdown("Enter the applicant's details below to predict loan approval:")
 
