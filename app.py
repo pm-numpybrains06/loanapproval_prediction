@@ -35,6 +35,7 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
+st_lottie(header_anim, height=200, key="header")
 st.title("🏦 Loan Approval Prediction App")
 st.markdown("Enter the applicant's details below to predict loan approval:")
 
@@ -45,6 +46,7 @@ def load_lottiefile(filepath: str):
 
 success_anim = load_lottiefile("success_animation.json")
 fail_anim = load_lottiefile("failure_animation.json")
+header_anim = load_lottiefile("header_animation.json")
 
 with st.sidebar:
     st.title("📊 About This App")
