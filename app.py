@@ -77,9 +77,9 @@ def encode_inputs():
 
 
 # Trigger prediction only when real button is clicked
-    if st.button("🚀 Predict Loan Status"):
-        features = encode_inputs()
-        prediction = model.predict(features)[0]
+if st.button("🚀 Predict Loan Status"):
+    features = encode_inputs()
+    prediction = model.predict(features)[0]
 
     if prediction == 1:
         st.success("✅ Loan Approved!")
