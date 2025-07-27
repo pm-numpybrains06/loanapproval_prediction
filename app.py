@@ -77,6 +77,23 @@ def encode_inputs():
 if st.button("Predict"):
     features = encode_inputs()
     prediction = model.predict(features)[0]
+st.markdown("""
+    <style>
+    .predict-button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 30px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .predict-button:hover {
+        background-color: #45a049;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
     if prediction == 1:
         st.success("✅ Loan Approved!")
