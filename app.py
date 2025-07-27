@@ -92,8 +92,10 @@ predict_clicked = st.markdown("""
         </form>
     </div>
 """, unsafe_allow_html=True)
-# Prediction logic
-if st.button("Predict"):
+predict_triggered = st.button(" ", key="invisible")
+
+# Trigger prediction only when real button is clicked
+if predict_triggered:
     features = encode_inputs()
     prediction = model.predict(features)[0]
 
