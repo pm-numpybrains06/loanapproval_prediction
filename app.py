@@ -41,7 +41,10 @@ with st.sidebar:
 
     Upload your model: `loan_model.pkl`  
     Add animations: `success.json`, `fail.json`, `header.json`
-    """)
+
+    Developed by **Prajukta Mandal** 💡
+""")
+    
                
 
 # Input form
@@ -84,7 +87,7 @@ if st.button("Predict"):
 
 
 st.markdown("<hr>", unsafe_allow_html=True)
-st.markdown("<p style='text-align:center'>Made with ❤️ by Prajukta Mandal</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center'>Made with ❤️ by Streamlit</p>", unsafe_allow_html=True)
 
 
 # In[ ]:
