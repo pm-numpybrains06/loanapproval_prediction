@@ -73,34 +73,15 @@ def encode_inputs():
                       self_emp_val, applicant_income, coapplicant_income,
                       loan_amount, loan_term, credit_history, prop_val]])
 
-predict_clicked = st.markdown("""
-    <div style="text-align: center;">
-        <form action="" method="post">
-            <button type="submit" style="
-                background-color: #4CAF50;
-                color: white;
-                font-size: 20px;
-                font-weight: bold;
-                padding: 12px 30px;
-                margin-top: 20px;
-                border: none;
-                border-radius: 12px;
-                cursor: pointer;
-                box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-                transition: 0.3s ease;
-            ">🚀 Predict Loan Status</button>
-        </form>
-    </div>
-""", unsafe_allow_html=True)
-predict_triggered = st.button(" ", key="invisible")
+
+
 
 # Trigger prediction only when real button is clicked
-if predict_triggered:
-    features = encode_inputs()
-    prediction = model.predict(features)[0]
+    if st.button("🚀 Predict Loan Status"):
+        features = encode_inputs()
+        prediction = model.predict(features)[0]
 
-
-    if prediction == 1:
+     if prediction == 1:
         st.success("✅ Loan Approved!")
         st_lottie(success_anim, speed=1, height=300)
     else:
