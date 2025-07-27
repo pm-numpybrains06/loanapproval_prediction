@@ -26,6 +26,20 @@ def load_lottiefile(filepath: str):
 success_anim = load_lottiefile("success_animation.json")
 fail_anim = load_lottiefile("failure_animation.json")
 
+with st.sidebar:
+    st.title("📊 About This App")
+    st.markdown("""
+    This app predicts whether a loan will be **approved** or **rejected** based on applicant data.
+
+    **Built with**:
+    - Streamlit
+    - Scikit-learn
+    - Lottie Animations
+
+    Upload your model: `loan_model.pkl`  
+    Add animations: `success.json`, `fail.json`, `header.json`
+    """)
+
 # Input form
 gender = st.selectbox("Gender", ["Male", "Female"])
 married = st.selectbox("Married", ["Yes", "No"])
@@ -65,7 +79,8 @@ if st.button("Predict"):
         st_lottie(fail_anim, speed=1, height=300)
 
 
-
+st.markdown("<hr>", unsafe_allow_html=True)
+st.markdown("<p style='text-align:center'>Made with ❤️ by Prajukta Mandal</p>", unsafe_allow_html=True)
 
 
 # In[ ]:
