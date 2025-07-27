@@ -18,23 +18,6 @@ st.set_page_config(page_title="Loan Approval Predictor", layout="centered")
 st.title("🏦 Loan Approval Prediction App")
 st.markdown("Enter the applicant's details below to predict loan approval:")
 
-st.markdown("""
-    <style>
-    .predict-button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 12px 30px;
-        font-size: 18px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-    .predict-button:hover {
-        background-color: #45a049;
-    }
-    </style>
-""", unsafe_allow_html=True)
 # Load Lottie JSON from local files
 def load_lottiefile(filepath: str):
     with open(filepath, "r") as f:
@@ -90,6 +73,25 @@ def encode_inputs():
                       self_emp_val, applicant_income, coapplicant_income,
                       loan_amount, loan_term, credit_history, prop_val]])
 
+predict_clicked = st.markdown("""
+    <div style="text-align: center;">
+        <form action="" method="post">
+            <button type="submit" style="
+                background-color: #4CAF50;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 12px 30px;
+                margin-top: 20px;
+                border: none;
+                border-radius: 12px;
+                cursor: pointer;
+                box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+                transition: 0.3s ease;
+            ">🚀 Predict Loan Status</button>
+        </form>
+    </div>
+""", unsafe_allow_html=True)
 # Prediction logic
 if st.button("Predict"):
     features = encode_inputs()
