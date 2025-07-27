@@ -74,9 +74,6 @@ def encode_inputs():
                       loan_amount, loan_term, credit_history, prop_val]])
 
 # Prediction logic
-if st.button("Predict"):
-    features = encode_inputs()
-    prediction = model.predict(features)[0]
 st.markdown("""
     <style>
     .predict-button {
@@ -94,6 +91,10 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
+if st.button("Predict"):
+    features = encode_inputs()
+    prediction = model.predict(features)[0]
+
 
     if prediction == 1:
         st.success("✅ Loan Approved!")
