@@ -35,7 +35,7 @@ st.markdown("""
     }
     </style>
 """, unsafe_allow_html=True)
-st_lottie(header_anim, height=200, key="header")
+
 st.title("🏦 Loan Approval Prediction App")
 st.markdown("Enter the applicant's details below to predict loan approval:")
 
