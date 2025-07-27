@@ -42,7 +42,7 @@ with st.sidebar:
     Upload your model: `loan_model.pkl`  
     Add animations: `success.json`, `fail.json`, `header.json`
     """)
-               Developed by :- Prajukta Mandal
+               
 
 # Input form
 gender = st.selectbox("Gender", ["Male", "Female"])
